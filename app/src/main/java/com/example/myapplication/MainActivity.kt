@@ -26,10 +26,14 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, "button clicked",
             Toast.LENGTH_SHORT).show()
 
-        val randomInt = Random().nextInt(6) + 1
+        val randomInt1 = Random().nextInt(6) + 1
+        val randomInt2 = Random().nextInt(6) + 1
+        val randomInt3 = Random().nextInt(6) + 1
+
+        val sum = randomInt1 + randomInt2 + randomInt3
 
         val result_text : TextView = findViewById(R.id.result_text)
-        result_text.text = randomInt.toString()
+        result_text.text = sum.toString()
     }
 
     private fun countUp()
@@ -44,11 +48,11 @@ class MainActivity : AppCompatActivity() {
         {
             var resultInt = resultText.text.toString().toInt()
 
-            if (resultInt < 6)
-            {
+            //if (resultInt < 6)
+            //{
                 resultInt++
                 resultText.text = resultInt.toString()
-            }
+            //}
         }
     }
 }
